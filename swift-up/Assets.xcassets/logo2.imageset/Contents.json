@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "craiyon_204413_logo_to_social_application_its_name_spider_with_black_and_green (1).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
