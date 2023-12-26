@@ -31,8 +31,7 @@ class postsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-      //  btnLike.setTitle(, for: <#T##UIControl.State#>)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

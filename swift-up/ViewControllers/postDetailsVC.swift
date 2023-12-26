@@ -53,9 +53,6 @@ class postDetailsVC: UIViewController {
         if let image = post.image {
             imgPostBodyPhoto.SetImageFromURL(stringimg: image)
         }
-       
-      
-    
         //COMMENT :
         getPostDetialsReload()
     }

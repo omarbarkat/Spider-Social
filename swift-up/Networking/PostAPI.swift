@@ -9,11 +9,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import UIKit
-
-//import AsyncAlgorithms
-
-
-
 class PostAPI {
     var tags: String = ""
     static let appID = "654a735b9848f4fa9ab41b7c"
@@ -40,12 +35,12 @@ class PostAPI {
             let decodable = JSONDecoder()
             do {
               let posts = try decodable.decode([Post].self, from: dataa.rawData())
+                print(posts)
                 CompletionHandler(posts,total)
               //  print(tag)
             } catch let error{
                 print(error)
             }
-        
         }
     }
     static  func GetAllTags (CompletionHandler: @escaping ([String])->()){
@@ -53,43 +48,12 @@ class PostAPI {
         AF.request(url, headers: headers).responseJSON { response in
             let jsonData = JSON(response.value)
             var data = jsonData["data"]
-            
-         //   var mydata = data
-           // mydata.removeFirst().null
-            //let medata = mydata.lazy.
-          //  print(mydata)
-        //    let data: [JSON?] = jsonData["data"].rawValue as! [JSON?]
-         //   let withNoNils = data.compacted()
-            
-          //  let data = jsonData["data"]
-           // var nonNilElements = data.flatMap { $0 }
-          //  nonNilElements = nonNilElements.filter { $0 != nil }
-          //  print(nonNilElements)
-       //     let data = jsonData["data"]
-       //     print(data.compact())
-            // Array(withNoNils) == [10, 30, 2, 3, 5]
-            
-       //     data.map {($1 as? String) ?? ""}
-            
-            
             do {
                 let decodable = JSONDecoder()
-             //   let xTag = try decodable.decode([String].self, from: mydata.rawData())
-                
-               // print("tagzzzzzzz: ", xTag)
+        
             } catch {
                 print("JSONSerialization: ", error)
             }
-            
-//           do {
-////               let tags = try decodable.decode([String].self, from: data[].rawData())
-////                print(tags)
-////                CompletionHandler(tags)
-//            } catch let error{
-////                print(error)
-//            }
-//           // print(data)
-
         }
     }
     static func getUserProfile ( id : String , CompletionHandler :@escaping (User) ->() ) {
